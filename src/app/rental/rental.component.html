@@ -1,0 +1,52 @@
+<div class="container">
+  <br />
+  <h2>Select Rental</h2>
+  <br />
+  <div class="row">
+    <div class="col-md-2">
+      <label>Make</label>
+    </div>
+    <div class="col-md-6">
+      <select
+        name="Make"
+        (change)="bindModel($event.target.value)"
+        class="form-control"
+      >
+        <option value="undefined">Select Make</option>
+        <option *ngFor="let rental of listMake" [value]="rental.make">
+          {{ rental.make }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Model</label>
+    </div>
+    <div class="col-md-6">
+      <select
+        name="Model"
+        (change)="bindYear($event.target.value)"
+        class="form-control"
+      >
+        <option value="undefined">Select Model</option>
+        <option *ngFor="let rental of listModel" [value]="rental.model">
+          {{ rental.model }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Year</label>
+    </div>
+    <div class="col-md-6">
+      <select name="Year" class="form-control">
+        <option value="undefined">Select Year</option>
+        <option *ngFor="let rental of listYear" [value]="rental.year">
+          {{ rental.year }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

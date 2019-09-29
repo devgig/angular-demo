@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  auth: {
+    clientID: '5y9QNlQZvL0Z0vHHXF4EeZGx8ibAY5Vl',
+    domain: 'devgig.auth0.com', // e.g., you.auth0.com
+    audience: 'http://localhost:3001',
+    auth0RedirectUri: 'http://localhost:4200/callback', // URL to return to after auth0 login
+    auth0ReturnTo: 'http://localhost:4200', // URL to return to after auth0 logout
+    scope: 'openid profile',
+    logOutUri: 'http://localhost:4200'
+  }
 };
 
 /*

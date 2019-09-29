@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RentalComponent } from './rental/rental.component';
+import { CallbackComponent } from './auth/callback/callback.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RentalComponent,
+    CallbackComponent,
   ],
   imports: [
     BrowserModule,
